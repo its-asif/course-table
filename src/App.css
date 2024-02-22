@@ -14,10 +14,7 @@
 /* dropdown css */
 
 .dropdown-container{
-  /* width: 100vh; */
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 80px;
+  
 }
 
 .dropdown {
