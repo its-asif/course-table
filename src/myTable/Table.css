@@ -1,32 +1,25 @@
 /* Table CSS */
 .table {
-display: table;
-width: max-content;
-border: 1px solid black;
-overflow: scroll;
-margin: 0 auto;
+    display: grid;
+    border: 1px solid black;
+    overflow: auto;
+    margin: 0 auto;
 }
 
 .table-row {
-display: table-row;
-text-align: center;
-overflow: scroll;
+    display: contents; 
+    text-align: center;
+    overflow: scroll;
 }
 
 .table-heading {
-font-weight: bolder;
-text-align: center;
+    font-weight: bolder;
+    text-align: center;
 }
 
 .table-col {
-float: left;
-display: flex; 
-justify-items: center;
-align-items: center;
-width: 150px;
-height: 40px;
-
-border: 1px solid black;
+    padding: 10px; 
+    border: 1px solid black;
 }
 
 .actionBtn {

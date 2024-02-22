@@ -21,7 +21,7 @@ function App() {
   // console.log('visibleColumns:', visibleColumns);
 
 
-  // toggle the visibility of columns
+  // toggle - visibility of columns
   const toggleColumnVisibility = (columnName) => {
     setVisibleColumns({
       ...visibleColumns,
