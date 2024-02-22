@@ -7,17 +7,22 @@
 
 
 
-
+.container2{
+  width:60%;
+  margin: 0 auto;
+}
 
 
 
 /* dropdown css */
 
-.dropdown-container{
-  
+.container{
+  width: min-content;
+  margin: 0 auto;
 }
 
 .dropdown {
+  width: max-content;
   padding: 20px ;
   text-align: left;
   cursor: pointer;

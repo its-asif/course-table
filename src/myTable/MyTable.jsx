@@ -5,6 +5,7 @@ const Table = ({ tableHeading, tableData, visibleColumns, toggleColumnVisibility
         <div>
             <div className="table">
 
+{/* --------------------------------------------------------------------------------- */}
 
                 {/* Table Header */}
                 <div className="table-row">
@@ -17,6 +18,8 @@ const Table = ({ tableHeading, tableData, visibleColumns, toggleColumnVisibility
                 ))}
                 </div>
                 
+{/* --------------------------------------------------------------------------------- */}
+
                 {/* Table Data - map */}
                 {tableData.map((row, rowIndex) => (
                     <div key={rowIndex} className="table-row">
