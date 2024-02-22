@@ -1,0 +1,50 @@
+/* Table CSS */
+.table {
+display: table;
+width: max-content;
+border: 1px solid black;
+overflow: scroll;
+margin: 0 auto;
+}
+
+.table-row {
+display: table-row;
+text-align: center;
+overflow: scroll;
+}
+
+.table-heading {
+font-weight: bolder;
+text-align: center;
+}
+
+.table-col {
+float: left;
+display: flex; 
+justify-items: center;
+align-items: center;
+width: 150px;
+height: 40px;
+
+border: 1px solid black;
+}
+
+.actionBtn {
+    width: 80px;
+    margin: 0 auto;
+    background-color: #7c67ef;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        background-color: #5f4bd1;
+    }
+}
+
+.rowData {
+    width: fit-content;
+    margin: auto;
+}
