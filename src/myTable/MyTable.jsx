@@ -33,11 +33,14 @@ const Table = ({ tableHeading, tableData, visibleColumns, setTableData }) => {
     useEffect(() => {
         const handleClick = (e) => {
             if (e.target.classList.contains('delete-btn')) {
+                
                 // Handle delete button click
-
-                const rowIndex = e.target.id;
-                tableData.splice(rowIndex, 1);
-                setTableData([...tableData]);
+                // const rowIndex = e.target.id;
+                // console.log(rowIndex);
+                // console.log(tableData);
+                // tableData.splice(rowIndex, 1);
+                // console.log(tableData);
+                // setTableData([...tableData]);
                 
                 
             } else if (e.target.classList.contains('edit-btn')) {
@@ -117,7 +120,7 @@ const Table = ({ tableHeading, tableData, visibleColumns, setTableData }) => {
                                     {col === "Action" ? (
                                             <div className='button-container'>
                                                 <button className="actionBtn edit-btn" id={rowIndex}>Edit</button>
-                                                <button className="actionBtn delete-btn" id={rowIndex}>Delete</button>
+                                                {/* <button className="actionBtn delete-btn" id={rowIndex}>Delete</button> */}
                                             </div>
                                         ) : (
                                             <div className="rowData" id={rowIndex}>
