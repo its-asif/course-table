@@ -44,7 +44,7 @@ function App() {
 
 
 
-{/* -------------------------------------------------------------------------- */}
+{/* --------------------------------------------------------------------------- */}
 
 
     <div className='container2'>
@@ -86,6 +86,7 @@ function App() {
         <MyTable 
           tableHeading={tableHeading} 
           tableData={tableData} 
+          setTableData={setTableData}
           visibleColumns={visibleColumns}
           toggleColumnVisibility={toggleColumnVisibility}
         />
