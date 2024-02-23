@@ -22,16 +22,6 @@
     border: 1px solid black;
 }
 
-.actionBtn {
-    width: 80px;
-    margin: 0 auto;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: none;
-
-}
 
 .rowData {
     width: fit-content;
@@ -43,6 +33,27 @@
 .edit-table{
     display: none;
     margin: 20px auto;
+}
+
+
+
+/* Buttons */
+
+.button-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.actionBtn {
+    width: 80px;
+    margin: 0 5px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+
 }
 
 .delete-btn{

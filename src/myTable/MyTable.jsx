@@ -19,7 +19,6 @@ const Table = ({ tableHeading, tableData, visibleColumns, setTableData }) => {
             Date: e.target.date.value,
             Author: e.target.author.value,
             Status: e.target.status.value,
-            Action: 'Edit'
         }
 
         // update the table data
@@ -35,7 +34,11 @@ const Table = ({ tableHeading, tableData, visibleColumns, setTableData }) => {
         const handleClick = (e) => {
             if (e.target.classList.contains('delete-btn')) {
                 // Handle delete button click
-                e.target.parentElement.parentElement.remove();
+
+                const rowIndex = e.target.id;
+                tableData.splice(rowIndex, 1);
+                setTableData([...tableData]);
+                
                 
             } else if (e.target.classList.contains('edit-btn')) {
                 // Handle edit button click
@@ -44,7 +47,8 @@ const Table = ({ tableHeading, tableData, visibleColumns, setTableData }) => {
                 setEditIndex(rowIndex); // set the index of the row to be edited
 
                 // get the row data
-                const row = e.target.parentElement.parentElement;
+                const row = e.target.parentElement.parentElement.parentElement;
+                console.log('row:', row);
                 const cols = row.querySelectorAll('.rowData');
                 const form = document.querySelector('.edit-table form');
                 form.title.value = cols[0].textContent; // set the form values
@@ -110,13 +114,19 @@ const Table = ({ tableHeading, tableData, visibleColumns, setTableData }) => {
                         {tableHeading.map((col, colIndex) => (
                             visibleColumns[col] && // if visible then show
                             <div key={colIndex} className={`table-col `}>
-                                <div
-                                    className={`${col == "Action" ? 'actionBtn' : 'rowData'}
-                                                ${row[col] == 'Delete' ? 'delete-btn' : row[col] == 'Edit' ? 'edit-btn' : ''}`}
-                                    id={rowIndex}
-                                >
-                                    {row[col]}
-                                </div>
+                                    {col === "Action" ? (
+                                            <div className='button-container'>
+                                                <button className="actionBtn edit-btn" id={rowIndex}>Edit</button>
+                                                <button className="actionBtn delete-btn" id={rowIndex}>Delete</button>
+                                            </div>
+                                        ) : (
+                                            <div className="rowData" id={rowIndex}>
+                                                {
+                                                    row[col]
+                                                }
+                                            </div>
+                                        )
+                                    }
                             </div>
                         ))}
                     </div>

@@ -16,7 +16,6 @@ const AddData = ({tableData, setTableData, tableHeading}) => {
             Date : e.target.date.value,
             Author: e.target.author.value,
             Status: e.target.status.value,
-            Action: e.target.action.value
         }
         
         setTableData([...tableData, newCourse]);
@@ -59,13 +58,6 @@ const AddData = ({tableData, setTableData, tableHeading}) => {
                     <select name="status" required>
                         <option value="Active">Active</option>
                         <option value="Inactive">Inactive</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Action:</label>
-                    <select name="action" required>
-                        <option value="Edit">Edit</option>
-                        <option value="Delete">Delete</option>
                     </select>
                 </div>
 
