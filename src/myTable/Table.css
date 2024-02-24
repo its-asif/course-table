@@ -2,8 +2,9 @@
 .table {
     display: grid;
     border: 1px solid black;
-    overflow: auto;
     margin: 0 auto;
+    overflow-x: auto;
+    margin-bottom: 40px;
 }
 
 .table-row {

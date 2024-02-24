@@ -98,7 +98,7 @@ const Table = ({ tableHeading, tableData, visibleColumns, setTableData }) => {
 
 
             {/* Table */}
-            <div className="table" style={{ "gridTemplateColumns": `repeat(${visibleColumnCount}, minmax(150px, 1fr))` }} >
+            <div className="table" style={{ "gridTemplateColumns": `repeat(${visibleColumnCount}, minmax(100px, 1fr))` }} >
                 {/* Table Header */}
                 <div className="table-row">
                     {tableHeading.map((item, index) => (
