@@ -25,8 +25,10 @@
 
 
 .rowData {
-    width: fit-content;
     margin: auto;
+    white-space: pre-wrap; /* show all white spaces */
+    word-wrap: break-word; /* break words */
+
 }
 
 
